@@ -165,15 +165,20 @@ let total = myNumbers.reduce((total, current) =>{
 
 // Code Here
 let myNumbersIndex = []
-myNumbersIndex
+myNumbersIndex.forEach((element, index, array) => {
+	
+})
 
 
 //////////////////PROBLEM 18////////////////////
 
 // Did you know that George Foreman has five sons named George? Let's go ahead and change everyone's name in the notGeorge array to George using .map. Call the new array 'forTheLoveOfGeorge'
-const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
+const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
+let forTheLoveOfGeorge = notGeorge.map((element, index, array) => {
+	return element = "George";
+})
 
 //////////////////PROBLEM 19////////////////////
 
@@ -188,9 +193,18 @@ const people = [
 ]
 
 // Code Here
-
+const enemies = people.filter((element, index, array) => {
+	if(element.friend === false){
+		return element;
+	}
+})
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
 // Code Here
+const totallyAwesome = people.reduce((acc, cur) => {
+	acc += cur.awesomeLevel;
+	console.log(people.awesomeLevel)
+})
+	
